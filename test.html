@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Charts</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="bootstrap.bundle.min.js/bootstrap.bundle.js"></script>
+	
+	<style>
+		img{
+			max-width: 100%;
+			max-height: 100%;
+			display: block; /* remove extra space below image */
+		}
+	</style>
+</head>
+<body>
+
+	<div class="jumbotron text-center">
+		<h1>Charts</h1>
+		<p>Charts updated every 00 and 12 UTC</p>
+	</div>
+	
+	<div class="container-fluid>
+		<div class="row">
+			<div class="col-sm-3">
+				<h3>EC-global</h3>
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Model data
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li role="presentation"><a role="menuitem" href="#">925hPa</a></li>
+						<script>
+							$("#boat").click(function() {
+
+							var srcName = $(this).attr("src");
+
+							if (srcName =="boat.png") {
+							var newImgSrc = $(this).attr("src").replace(srcName, "boat-2.png");
+							} else {
+							var newImgSrc = $(this).attr("src").replace(srcName, "boat.png");
+							}
+
+							$(this).attr("src", newImgSrc);
+
+							}
+						</script>
+						<li role="presentation"><a role="menuitem" href="#ECGcarousel8">850hPa</a></li>
+						<li role="presentation"><a role="menuitem" href="#">700hPa</a></li>
+						<li role="presentation"><a role="menuitem" href="#">Precipitation</a></li>
+					</ul>
+				</div>
+				<br>
+				<div id="ECGcarousel9" class="carousel slide" data-interval="false" data-keyboard="true">
+					<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#ECGcarousel9" data-slide-to="0" class="active"></li>
+							<li data-target="#ECGcarousel9" data-slide-to="1"></li>
+							<li data-target="#ECGcarousel9" data-slide-to="2"></li>
+						</ol>
+		
+					<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec03.gif" alt="ec03Z" style="width:100%;">	<!--change accordingly-->
+								<div class="carousel-caption d-none d-md-block">
+									<h4 class="text-primary"><script>
+										var myDate = new Date();
+										myDate.setDate(myDate.getDate());
+										var myDate1 = myDate.toJSON();
+										var myDate2 = myDate1.slice(0,10)
+										document.write(myDate2); 
+									</script> 00Z </h4> 
+								</div>
+							</div>
+
+							<div class="item">
+								<div class="carousel-caption d-none d-md-block">
+									<h4 class="text-primary"><script>
+										var myDate = new Date();
+										myDate.setDate(myDate.getDate());
+										var myDate1 = myDate.toJSON();
+										var myDate2 = myDate1.slice(0,10)
+										document.write(myDate2); 
+									</script> 03 Z</h4> 
+								</div>
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec06.gif" alt="06Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec09.gif" alt="09Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<div class="carousel-caption d-none d-md-block">
+									<h4 class="text-primary" 
+									 <script> document.write(12Z.lastmodified) </script></h4>
+								</div>
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec12.gif" alt="12Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec15.gif" alt="15Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec18.gif" alt="18Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec21.gif" alt="21Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<div class="carousel-caption d-none d-md-block">
+									<h4 class="text-primary">
+									<script>
+										var myDate = new Date();
+										myDate.setDate(myDate.getDate() + 1);
+										var myDate1 = myDate.toJSON();
+										var myDate2 = myDate1.slice(0,10)
+										document.write(myDate2); 
+									</script> 00 Z</h4>
+								</div>
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec24.gif" alt="24Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec27.gif" alt="27Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec30.gif" alt="30Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec33.gif" alt="33Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec36.gif" alt="36Z" style="width:100%;">
+							</div>
+						</div>
+
+					<!-- Left and right controls -->
+						<a class="left carousel-control" href="#ECGcarousel9" data-slide="prev" style="background-image: none;">
+							<span class="fa fa-chevron-left fa-lg" style= "color: black;"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#ECGcarousel9" data-slide="next" style="background-image: none;">
+							<span class="fa fa-chevron-right fa-lg" style= "color: black;"></span>
+							<span class="sr-only">Next</span>
+						</a>
+				
+				</div> 
+				<br>
+				<div id="ECGcarousel8" class="carousel slide" data-interval="false">
+					<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#ECGcarousel8" data-slide-to="0" class="active"></li>
+							<li data-target="#ECGcarousel8" data-slide-to="1"></li>
+							<li data-target="#ECGcarousel8" data-slide-to="2"></li>
+						</ol>
+		
+					<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec03.gif" alt="t03Z" style="width:100%;">  <!--change accordingly-->
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec06.gif" alt="06Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec09.gif" alt="09Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec12.gif" alt="12Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec15.gif" alt="15Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec18.gif" alt="18Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec21.gif" alt="21Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec24.gif" alt="24Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec27.gif" alt="27Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec30.gif" alt="30Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec33.gif" alt="33Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec36.gif" alt="36Z" style="width:100%;">
+							</div>
+						</div>
+
+					<!-- Left and right controls -->
+						<a class="left carousel-control" href="#ECGcarousel8" data-slide="prev" style="background-image: none;">
+							<span class="fa fa-chevron-left fa-lg" style= "color: black;"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#ECGcarousel8" data-slide="next" style="background-image: none;">
+							<span class="fa fa-chevron-right fa-lg" style= "color: black;"></span>
+							<span class="sr-only">Next</span>
+						</a>
+				
+				</div> 
+			</div>
+		<div class="col-sm-3">
+			<h3>WRF-EC</h3> 
+			<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Model data
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li role="presentation"><a role="menuitem" href="#WRFcarousel">Precipitation</a></li>
+					</ul>
+			</div>
+			<br>
+			<div id="WRFcarousel" class="carousel slide" data-interval="false">
+					<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#WRFcarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#WRFcarousel" data-slide-to="1"></li>
+							<li data-target="#WRFcarousel" data-slide-to="2"></li>
+						</ol>
+		
+					<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec03.gif" alt="03Z" style="width:100%;">  <!--change accordingly-->
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec06.gif" alt="06Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec09.gif" alt="09Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec12.gif" alt="12Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec15.gif" alt="15Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec18.gif" alt="18Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec21.gif" alt="21Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec24.gif" alt="24Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec27.gif" alt="27Z" style="width:100%;">
+							</div>
+		
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec30.gif" alt="30Z" style="width:100%;">
+							</div>
+
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec33.gif" alt="33Z" style="width:100%;">
+							</div>
+    
+							<div class="item">
+								<img class ="img-responsive" src="E:\Charts Project\charts\current\ec36.gif" alt="36Z" style="width:100%;">
+							</div>
+						</div>
+
+					<!-- Left and right controls -->
+						<a class="left carousel-control" href="#WRFcarousel" data-slide="prev" style="background-image: none;">
+							<span class="fa fa-chevron-left fa-lg" style= "color: black;"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#WRFcarousel" data-slide="next" style="background-image: none;">
+							<span class="fa fa-chevron-right fa-lg" style= "color: black;"></span>
+							<span class="sr-only">Next</span>
+						</a>
+			</div>	
+		</div>
+    <div class="col-sm-3">
+		<h3>SingV</h3>  
+		<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Model data
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li role="presentation"><a role="menuitem" href="#">Precipitation</a></li>
+					</ul>
+		</div>
+		<br>
+		<div id="SVcarousel" class="carousel slide" data-interval="false">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#SVcarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#SVcarousel" data-slide-to="1"></li>
+						<li data-target="#SVcarousel" data-slide-to="2"></li>
+					</ol>
+		
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv03.gif" alt="03Z" style="width:100%;">  <!--change accordingly-->
+						</div>
+
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv06.gif" alt="06Z" style="width:100%;">
+						</div>
+    
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv09.gif" alt="09Z" style="width:100%;">
+						</div>
+		
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv12.gif" alt="12Z" style="width:100%;">
+						</div>
+
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv15.gif" alt="15Z" style="width:100%;">
+						</div>
+    
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv18.gif" alt="18Z" style="width:100%;">
+						</div>
+		
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv21.gif" alt="21Z" style="width:100%;">
+						</div>
+
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv24.gif" alt="24Z" style="width:100%;">
+						</div>
+    
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv27.gif" alt="27Z" style="width:100%;">
+						</div>
+		
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv30.gif" alt="30Z" style="width:100%;">
+						</div>
+
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv33.gif" alt="33Z" style="width:100%;">
+						</div>
+    
+						<div class="item">
+							<img class ="img-responsive" src="E:\Charts Project\charts\current\sv36.gif" alt="36Z" style="width:100%;">
+						</div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#SVcarousel" data-slide="prev" style="background-image: none;">
+						<span class="fa fa-chevron-left fa-lg" style= "color: black;"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#SVcarousel" data-slide="next" style="background-image: none;">
+						<span class="fa fa-chevron-right fa-lg" style= "color: black;"></span>
+						<span class="sr-only">Next</span>
+					</a>
+		</div>
+	</div>
+    <div class="col-sm-3">
+		<h3>Radar</h3>
+		<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Radar
+					<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li role="presentation"><a role="menuitem" href="#">Radar</a></li>
+					</ul>
+		</div>
+		<br>
+		<p>Under Construction</p>
+	</div>
+</div>
+
+</body>
+</html>
